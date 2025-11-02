@@ -92,7 +92,7 @@ class Deduplicator:
     
     def __init__(self):
         self.hash_to_files: Dict[str, List[Path]] = {}
-        self.quick_hash_to_files: Dict[str, List[Path]] = {}
+        self.size_to_files: Dict[int, List[Path]] = {}
     
     def add_file(self, file_path: Path, compute_full_hash: bool = False):
         """
@@ -100,20 +100,23 @@ class Deduplicator:
         
         Args:
             file_path: Path to the file
-            compute_full_hash: Whether to compute full content hash
+            compute_full_hash: Whether to compute full content hash immediately
         """
-        # Quick hash first
-        quick_hash = FileHasher.compute_quick_hash(file_path)
-        if quick_hash not in self.quick_hash_to_files:
-            self.quick_hash_to_files[quick_hash] = []
-        self.quick_hash_to_files[quick_hash].append(file_path)
-        
-        # Full hash if requested or if quick hash collision
-        if compute_full_hash or len(self.quick_hash_to_files[quick_hash]) > 1:
-            full_hash = FileHasher.compute_hash(file_path)
-            if full_hash not in self.hash_to_files:
-                self.hash_to_files[full_hash] = []
-            self.hash_to_files[full_hash].append(file_path)
+        try:
+            # Group by size first (fast and effective)
+            file_size = file_path.stat().st_size
+            if file_size not in self.size_to_files:
+                self.size_to_files[file_size] = []
+            self.size_to_files[file_size].append(file_path)
+            
+            # Compute full hash if requested or if size collision detected
+            if compute_full_hash or len(self.size_to_files[file_size]) > 1:
+                full_hash = FileHasher.compute_hash(file_path)
+                if full_hash not in self.hash_to_files:
+                    self.hash_to_files[full_hash] = []
+                self.hash_to_files[full_hash].append(file_path)
+        except (IOError, OSError):
+            pass  # Skip files we can't read
     
     def find_duplicates(self) -> Dict[str, List[Path]]:
         """
@@ -124,10 +127,10 @@ class Deduplicator:
         """
         duplicates = {}
         
-        # First check quick hash collisions
-        for quick_hash, files in self.quick_hash_to_files.items():
+        # Check files grouped by size
+        for size, files in self.size_to_files.items():
             if len(files) > 1:
-                # Verify with full hash
+                # Compute hashes for files with same size
                 file_groups: Dict[str, List[Path]] = {}
                 for file_path in files:
                     full_hash = FileHasher.compute_hash(file_path)
@@ -144,15 +147,15 @@ class Deduplicator:
     
     def get_stats(self) -> Dict:
         """Get deduplication statistics."""
-        total_files = sum(len(files) for files in self.quick_hash_to_files.values())
-        unique_quick = len(self.quick_hash_to_files)
+        total_files = sum(len(files) for files in self.size_to_files.values())
+        unique_sizes = len(self.size_to_files)
         
         duplicates = self.find_duplicates()
         duplicate_count = sum(len(files) - 1 for files in duplicates.values())
         
         return {
             'total_files': total_files,
-            'unique_quick_hashes': unique_quick,
+            'unique_sizes': unique_sizes,
             'duplicate_groups': len(duplicates),
             'duplicate_files': duplicate_count,
         }
