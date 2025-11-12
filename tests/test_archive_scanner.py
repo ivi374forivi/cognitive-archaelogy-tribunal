@@ -4,7 +4,6 @@ Tests for Archive Scanner module.
 
 import tempfile
 from pathlib import Path
-import pytest
 
 from cognitive_tribunal.modules.archive_scanner import ArchiveScanner
 
