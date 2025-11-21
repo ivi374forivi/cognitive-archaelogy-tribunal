@@ -5,12 +5,14 @@ Comprehensive archaeological dig tool for multi-layer cognitive ecosystem. Audit
 ## 📚 Documentation
 
 **New to this project?**
+
 - 📖 **[Documentation Hub](docs/)** - Setup guides, user guides, and analysis reports
 - 🎯 **[Quick Start](docs/guides/INTEGRATION_QUICK_START.md)** - Start integrating forks in 15 minutes
 - 📋 **[Integration Queue](context/planning/INTEGRATION_QUEUE.md)** - Track 42 fork integrations
 - 🔄 **[Current State](CONTEXTUAL_RELAY.md)** - Where we are and what's next
 
 **Quick Links:**
+
 - [Setup GitHub Token](docs/setup/GITHUB_TOKEN_SETUP.md)
 - [Complete Ingestion Plan](context/planning/INGESTION_PLAN.md)
 - [Repository Cleanup Plan](REPO_CLEANUP_PLAN.md)
@@ -18,6 +20,7 @@ Comprehensive archaeological dig tool for multi-layer cognitive ecosystem. Audit
 ## Features
 
 ### 🗂️ Module 1: Archive Scanner
+
 - Scans iCloud, Dropbox, local drives, and network storage
 - Intelligent file classification by type and purpose
 - Advanced deduplication with hash-based detection
@@ -25,6 +28,7 @@ Comprehensive archaeological dig tool for multi-layer cognitive ecosystem. Audit
 - Identifies large, old, and unused files
 
 ### 🤖 Module 2: AI Context Aggregator
+
 - Imports ChatGPT conversation exports
 - Supports generic JSON conversation formats
 - Extracts topics and conversation metadata
@@ -32,6 +36,7 @@ Comprehensive archaeological dig tool for multi-layer cognitive ecosystem. Audit
 - Timeline analysis of AI interactions
 
 ### 👤 Module 3: Personal Repo Analyzer
+
 - Analyzes personal GitHub repositories
 - Classifies forks vs. original repositories
 - Tracks modifications in forked repos
@@ -39,6 +44,7 @@ Comprehensive archaeological dig tool for multi-layer cognitive ecosystem. Audit
 - Activity and health metrics
 
 ### 🏢 Module 4: Org Repo Analyzer
+
 - Analyzes organization repositories
 - Status tracking (active, stale, abandoned, archived)
 - Dependency detection and analysis
@@ -46,6 +52,7 @@ Comprehensive archaeological dig tool for multi-layer cognitive ecosystem. Audit
 - Migration planning
 
 ### 🌐 Module 5: Web Bookmark Analyzer
+
 - Parses bookmark export files (Netscape format)
 - Extracts URLs, titles, and creation dates
 - Provides statistics on bookmark collections
@@ -76,6 +83,7 @@ export GITHUB_TOKEN="your_github_token_here"
 ## Quick Start
 
 ### Run All Modules
+
 ```bash
 python main.py \
   --scan-archives /path/to/archives \
@@ -86,26 +94,31 @@ python main.py \
 ```
 
 ### Archive Scanner Only
+
 ```bash
 python main.py --scan-archives /path/to/archives --output-dir ./output
 ```
 
 ### Personal Repos Only
+
 ```bash
 python main.py --personal-repos your-username --output-dir ./output
 ```
 
 ### Organization Repos Only
+
 ```bash
 python main.py --org-repos your-org --output-dir ./output
 ```
 
 ### AI Conversations Only
+
 ```bash
 python main.py --ai-conversations /path/to/chatgpt/export --output-dir ./output
 ```
 
 ### Web Bookmarks Only
+
 ```bash
 python main.py --web-bookmarks /path/to/bookmarks.html --output-dir ./output
 ```
@@ -113,16 +126,19 @@ python main.py --web-bookmarks /path/to/bookmarks.html --output-dir ./output
 ## Usage Examples
 
 ### Multiple Archive Locations
+
 ```bash
 python main.py --scan-archives "/path/to/iCloud,/path/to/Dropbox,/path/to/local" --output-dir ./output
 ```
 
 ### With Custom GitHub Token
+
 ```bash
 python main.py --personal-repos username --github-token ghp_yourtoken --output-dir ./output
 ```
 
 ### Skip Specific Outputs
+
 ```bash
 python main.py --personal-repos username --no-graph --no-triage --output-dir ./output
 ```
@@ -199,7 +215,21 @@ To export your ChatGPT conversations:
 
 ## Architecture
 
-```
+cognitive_tribunal/
+├── modules/              # Core audit modules
+│   ├── archive_scanner.py
+│   ├── ai_context_aggregator.py
+│   ├── personal_repo_analyzer.py
+ │   ├── org_repo_analyzer.py
+ │   └── web_bookmark_analyzer.py
+├── outputs/              # Output generators
+│   ├── inventory.py
+│   ├── knowledge_graph.py
+│   └── triage_report.py
+└── utils/                # Shared utilities
+  ├── file_utils.py
+  └── github_utils.py
+
 cognitive_tribunal/
 ├── modules/              # Core audit modules
 │   ├── archive_scanner.py
@@ -214,7 +244,25 @@ cognitive_tribunal/
 └── utils/                # Shared utilities
     ├── file_utils.py
     └── github_utils.py
+
+```text
+cognitive_tribunal/
+├── modules/              # Core audit modules
+│   ├── archive_scanner.py
+│   ├── ai_context_aggregator.py
+│   ├── personal_repo_analyzer.py
+ │   ├── org_repo_analyzer.py
+ │   └── web_bookmark_analyzer.py
+├── outputs/              # Output generators
+│   ├── inventory.py
+│   ├── knowledge_graph.py
+│   └── triage_report.py
+└── utils/                # Shared utilities
+  ├── file_utils.py
+  └── github_utils.py
 ```
+
+cognitive-tribunal-architecture
 
 ## Contributing
 

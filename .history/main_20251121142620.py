@@ -5,7 +5,7 @@ Command-line interface for running the complete audit suite.
 """
 
 import sys
- 
+from typing import Optional
 import argparse
 from pathlib import Path
 
@@ -22,7 +22,7 @@ from cognitive_tribunal.outputs.knowledge_graph import KnowledgeGraphGenerator
 from cognitive_tribunal.outputs.triage_report import TriageReportGenerator
 
 
-def load_github_token(provided_token):
+def load_github_token(provided_token: Optional[str]) -> Optional[str]:
     """Load GitHub token from argument or environment."""
     if provided_token:
         return provided_token

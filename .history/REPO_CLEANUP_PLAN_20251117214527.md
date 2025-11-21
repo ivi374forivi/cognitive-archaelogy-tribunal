@@ -16,7 +16,7 @@
 
 ### File Organization Needed
 
-```text
+```
 Current (cluttered):
 ├── README.md
 ├── USAGE.md
@@ -40,7 +40,7 @@ Current (cluttered):
 
 ## Proposed Structure
 
-```text
+```
 cognitive-archaelogy-tribunal/
 ├── README.md                          # Main entry point
 ├── USAGE.md                          # How to use the tool
