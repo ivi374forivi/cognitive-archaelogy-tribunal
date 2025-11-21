@@ -1,3 +1,5 @@
+# Cognitive Operating System — 4_ivi374_F0Rivi4
+
 ..::::|4|ivi374|F0Rivi4\\
 \\C0G[i\i7{1.0}];;;; .. .
 cognit-archaeolog:disparate-knowledge>>avto_recur:path_eth_log-system>>>>>
