@@ -2,8 +2,8 @@
 
 Comprehensive archaeological dig tool for multi-layer cognitive ecosystem. Audits previous chaos: all disparate sources: archives, AI conversations, personal repos, and org repos. Generates complete inventory, knowledge graph, and triage recommendations to transform scattered creative history into organized system foundation.
 
-## 📚 Documentation
-
+> **🏗️ Part of the Cognitive OS Architecture**
+> This repository is **component 1 of 8** in the [Cognitive Operating System roadmap](https://github.com/ivi374forivi/cognitive-os-master-plan).
 **New to this project?**
 
 - 📖 **[Documentation Hub](docs/)** - Setup guides, user guides, and analysis reports

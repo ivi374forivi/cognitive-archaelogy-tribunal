@@ -1,5 +1,7 @@
 # Cognitive Operating System — 4_ivi374_F0Rivi4
 
+<!-- markdownlint-disable MD040 MD046 -->
+
 ..::::|4|ivi374|F0Rivi4\
 \C0G\[i\i7{1.0}\];;;; .. .
 cognit-archaeolog:disparate-knowledge>>avto_recur:path_eth_log-system>>>>>
@@ -2672,7 +2674,7 @@ Actionable Outputs
 "Org repos needing documentation"
 "Potential consolidation candidates"
 
-## Sample Output Structure:
+## Sample Output Structure
 
 ## Repository Audit Report
 
@@ -2737,7 +2739,7 @@ Review classifications → Adjust rules if needed
 Execute triage plan → Start graduating/archiving
 Integrate with meta-synthesis-orchestrator → Feed data to knowledge graph
 
-## Dependencies:
+## Python Dependencies
 
 ## requirements.txt
 
@@ -2751,7 +2753,7 @@ tabulate>=0.9.0
 
 requests>=2.31.0
 
-## Environment Variables Needed:
+## Environment Variables Required
 
 ## .env.example
 
@@ -2913,11 +2915,11 @@ Foundation for next phase - Feeds into meta-synthesis-orchestrator
 
 Execution Order:
 
-# Full audit (all 4 layers)
+## Full audit (all 4 layers)
 
 python scripts/run_full_audit.py
 
-# Or run modules individually
+### Or run modules individually
 
 python scripts/run_module.py --module 0 # Archive only
 
@@ -2925,13 +2927,13 @@ python scripts/run_module.py --module 2 # Personal repos only
 
 python scripts/run_module.py --module 3 # Org repos only
 
-# Quick stats
+## Quick stats
 
 python scripts/quick_dashboard.py
 
-## Sample Output:
+## Sample Output
 
-## Cognitive Archaeology Report
+### Cognitive Archaeology Report
 
 Generated: 2025-11-02 04:09:45 UTC
 
@@ -2981,7 +2983,7 @@ Generated: 2025-11-02 04:09:45 UTC
 
 - CONSOLIDATE: 2
 
-### Knowledge Graph
+### Knowledge Graph Summary
 
 - Total nodes: 2,287
 
@@ -2993,7 +2995,7 @@ Generated: 2025-11-02 04:09:45 UTC
 
 - Personal → Org repos: 12 migrations identified
 
-### Top Recommendations
+### Top Recommendations (Initial Analysis)
 
 1. Graduate 5 personal repos to org
 
@@ -3003,9 +3005,10 @@ Generated: 2025-11-02 04:09:45 UTC
 
 4. Consolidate 2 redundant org repos
 
-## Dependencies:
+## Dependencies
 
-## requirements.txt
+```text
+requirements.txt:
 
 PyGithub>=2.1.1
 
@@ -3024,10 +3027,12 @@ matplotlib>=3.7.0 # For visualizations
 watchdog>=3.0.0 # For file system monitoring (optional)
 
 hashlib # Built-in (checksums)
+```
 
-## Environment Variables Needed:
+## Environment Configuration
 
-## .env.example
+```bash
+# .env.example
 
 GITHUB_TOKEN=your_personal_access_token_here
 
@@ -3048,6 +3053,7 @@ EXTERNAL_DRIVES=/Volumes/ExternalDrive1,/Volumes/ExternalDrive2
 CHATGPT_EXPORT_PATH=~/Downloads/chatgpt-exports
 
 CLAUDE_EXPORT_PATH=~/Downloads/claude-exports
+```
 
 This is the correct foundation. It audits ALL FOUR LAYERS and gives you the complete picture before you do anything else.
 
@@ -3308,13 +3314,9 @@ cognitive-os-master-plan/
 
 │ ├── system-constitution.md
 
-│   ├── meta-synthesis-orchestrator.md
+│ ├── meta-synthesis-orchestrator.md
 
-
-
-│   └── `[one file per planned repo]`
-
-
+│ └── `[one file per planned repo]`
 
 └── workflows/
 
@@ -3398,6 +3400,295 @@ Post to GitHub Discussions → Team visibility
 
 Make it public within org
 Enable comments for refinement
+
+## PRESERVATION EXECUTION CHECKLIST
+
+### Phase 1: Immediate Export & Repository Setup (Priority: URGENT)
+
+- Cognitive Operating System — 4\_ivi374\_F0Rivi4
+  - The ivi374forivi System Constitution
+    - Personal Profile Rules (4444JPP)
+    - Organization Rules (ivi374forivi)
+    - Migration Rules (Personal → Org)
+    - Archive Rules (Physical → Digital)
+    - AI Context Rules (Conversations → Code)
+  - Run the archaeology suite
+  - Make decisions on each item
+  - Execute the plan
+  - Establish ongoing process
+  - Main components needed
+  - Sample Output Structure
+  - Repository Audit Report
+    - Executive Summary
+    - Personal Repos (4444JPP)
+      - GRADUATE (5 repos)
+      - MINE (12 repos)
+      - ARCHIVE (8 repos)
+      - DELETE (10 repos)
+    - Org Repos (ivi374forivi)
+      - PRODUCTION (8 repos)
+      - DEVELOPMENT (10 repos)
+      - EXPERIMENTAL (3 repos)
+      - CONSOLIDATE (2 repos)
+    - Top Recommendations
+  - Dependencies
+  - requirements.txt
+  - Environment Variables Required
+  - .env.example
+  - Full audit (all 4 layers)
+    - Or run modules individually
+  - Quick stats
+  - Sample Output
+    - Cognitive Archaeology Report
+    - Layer 0: Archive Audit
+    - Layer 1: AI Context Audit
+    - Layer 2: Personal Repos (4444JPP)
+    - Layer 3: Org Repos (ivi374forivi)
+    - Knowledge Graph Summary
+    - Top Recommendations
+  - Dependencies
+  - Environment Configuration
+  - PRESERVATION EXECUTION CHECKLIST
+    - Phase 1: Immediate Export \& Repository Setup (Priority: URGENT)
+    - Phase 2: Documentation Structure (Priority: HIGH)
+    - Phase 3: Cross-Reference with Tracking Issues (Priority: HIGH)
+    - Phase 4: GitHub Discussions Post (Priority: MEDIUM)
+    - Phase 5: Cross-Repository Linking (Priority: MEDIUM)
+    - Phase 6: Maintenance \& Updates (Priority: ONGOING)
+  - Preservation Status Dashboard
+  - Next Review: 2025-11-28
+  - Use your chatgpt-exporter
+  - Save as: 2025-11-02\_cognitive-os-architecture-planning.json
+  - In ivi374forivi org
+  - Add this conversation as first planning doc
+  - Add link to master plan in README
+  - Note: "This repo is component 1 of 8 in the cognitive OS roadmap"
+  - Conversation Metadata
+  - Key Decisions
+  - Artifacts Generated
+  - Next Steps
+  - Full Conversation
+  - Your Cognitive OS Roadmap
+  - Preservation Protocol Established
+  - Your cognitive operating system now has its architectural blueprint ready. Create the master-plan repository manually, and the foundation will be complete. The archaeological dig begins with the tribunal, and the path from chaos to order is now clearly mapped
+
+### Phase 2: Documentation Structure (Priority: HIGH)
+
+- [ ] **Build complete documentation structure**
+  - [ ] Create `architecture/` directory
+    - [ ] `four-layer-model.md` - Archive→AI→Personal→Org definitions
+    - [ ] `repository-map.md` - All 35 personal + 24 org repos mapped
+    - [ ] `integration-points.md` - How components connect
+  - [ ] Create `roadmap/` directory
+    - [ ] `phase-1-foundation.md` - Tribunal, constitution, orchestrator
+    - [ ] `phase-2-specialized-tools.md` - Archive, AI context, lineage
+    - [ ] `phase-3-integration.md` - Automation & feedback loops
+  - [ ] Create `specifications/` directory
+    - [ ] `1-cognitive-archaelogy-tribunal.md` ✅ (already created)
+    - [ ] `2-system-constitution.md`
+    - [ ] `3-meta-synthesis-orchestrator.md`
+    - [ ] `4-archive-resurrection-engine.md`
+    - [ ] `5-ai-context-compiler.md`
+    - [ ] `6-repo-lineage-tracker.md`
+    - [ ] `7-graduation-pipeline-automator.md`
+    - [ ] `8-recursive-feedback-integrator.md`
+  - [ ] Create `workflows/` directory
+    - [ ] `repo-creation-checklist.md`
+    - [ ] `migration-process.md`
+    - [ ] `conversation-preservation.md`
+    - [ ] `preservation-execution-checklist.md` (THIS CHECKLIST)
+
+### Phase 3: Cross-Reference with Tracking Issues (Priority: HIGH)
+
+- Cognitive Operating System — 4\_ivi374\_F0Rivi4
+  - The ivi374forivi System Constitution
+    - Personal Profile Rules (4444JPP)
+    - Organization Rules (ivi374forivi)
+    - Migration Rules (Personal → Org)
+    - Archive Rules (Physical → Digital)
+    - AI Context Rules (Conversations → Code)
+  - Run the archaeology suite
+  - Make decisions on each item
+  - Execute the plan
+  - Establish ongoing process
+  - Main components needed
+  - Sample Output Structure
+  - Repository Audit Report
+    - Executive Summary
+    - Personal Repos (4444JPP)
+      - GRADUATE (5 repos)
+      - MINE (12 repos)
+      - ARCHIVE (8 repos)
+      - DELETE (10 repos)
+    - Org Repos (ivi374forivi)
+      - PRODUCTION (8 repos)
+      - DEVELOPMENT (10 repos)
+      - EXPERIMENTAL (3 repos)
+      - CONSOLIDATE (2 repos)
+    - Top Recommendations
+  - Dependencies
+  - requirements.txt
+  - Environment Variables Required
+  - .env.example
+  - Full audit (all 4 layers)
+    - Or run modules individually
+  - Quick stats
+  - Sample Output
+    - Cognitive Archaeology Report
+    - Layer 0: Archive Audit
+    - Layer 1: AI Context Audit
+    - Layer 2: Personal Repos (4444JPP)
+    - Layer 3: Org Repos (ivi374forivi)
+    - Knowledge Graph Summary
+    - Top Recommendations
+  - Dependencies
+  - Environment Configuration
+  - PRESERVATION EXECUTION CHECKLIST
+    - Phase 1: Immediate Export \& Repository Setup (Priority: URGENT)
+    - Phase 2: Documentation Structure (Priority: HIGH)
+    - Phase 3: Cross-Reference with Tracking Issues (Priority: HIGH)
+    - Phase 4: GitHub Discussions Post (Priority: MEDIUM)
+    - Phase 5: Cross-Repository Linking (Priority: MEDIUM)
+    - Phase 6: Maintenance \& Updates (Priority: ONGOING)
+  - Preservation Status Dashboard
+  - Next Review: 2025-11-28
+  - Use your chatgpt-exporter
+  - Save as: 2025-11-02\_cognitive-os-architecture-planning.json
+  - In ivi374forivi org
+  - Add this conversation as first planning doc
+  - Add link to master plan in README
+  - Note: "This repo is component 1 of 8 in the cognitive OS roadmap"
+  - Conversation Metadata
+  - Key Decisions
+  - Artifacts Generated
+  - Next Steps
+  - Full Conversation
+  - Your Cognitive OS Roadmap
+  - Preservation Protocol Established
+  - Your cognitive operating system now has its architectural blueprint ready. Create the master-plan repository manually, and the foundation will be complete. The archaeological dig begins with the tribunal, and the path from chaos to order is now clearly mapped
+
+### Phase 4: GitHub Discussions Post (Priority: MEDIUM)
+
+- Cognitive Operating System — 4\_ivi374\_F0Rivi4
+  - The ivi374forivi System Constitution
+    - Personal Profile Rules (4444JPP)
+    - Organization Rules (ivi374forivi)
+    - Migration Rules (Personal → Org)
+    - Archive Rules (Physical → Digital)
+    - AI Context Rules (Conversations → Code)
+  - Run the archaeology suite
+  - Make decisions on each item
+  - Execute the plan
+  - Establish ongoing process
+  - Main components needed
+  - Sample Output Structure
+  - Repository Audit Report
+    - Executive Summary
+    - Personal Repos (4444JPP)
+      - GRADUATE (5 repos)
+      - MINE (12 repos)
+      - ARCHIVE (8 repos)
+      - DELETE (10 repos)
+    - Org Repos (ivi374forivi)
+      - PRODUCTION (8 repos)
+      - DEVELOPMENT (10 repos)
+      - EXPERIMENTAL (3 repos)
+      - CONSOLIDATE (2 repos)
+    - Top Recommendations
+  - Dependencies
+  - requirements.txt
+  - Environment Variables Required
+  - .env.example
+  - Full audit (all 4 layers)
+    - Or run modules individually
+  - Quick stats
+  - Sample Output
+    - Cognitive Archaeology Report
+    - Layer 0: Archive Audit
+    - Layer 1: AI Context Audit
+    - Layer 2: Personal Repos (4444JPP)
+    - Layer 3: Org Repos (ivi374forivi)
+    - Knowledge Graph Summary
+    - Top Recommendations
+  - Dependencies
+  - Environment Configuration
+  - PRESERVATION EXECUTION CHECKLIST
+    - Phase 1: Immediate Export \& Repository Setup (Priority: URGENT)
+    - Phase 2: Documentation Structure (Priority: HIGH)
+    - Phase 3: Cross-Reference with Tracking Issues (Priority: HIGH)
+    - Phase 4: GitHub Discussions Post (Priority: MEDIUM)
+    - Phase 5: Cross-Repository Linking (Priority: MEDIUM)
+    - Phase 6: Maintenance \& Updates (Priority: ONGOING)
+  - Preservation Status Dashboard
+  - Next Review: 2025-11-28
+  - Use your chatgpt-exporter
+  - Save as: 2025-11-02\_cognitive-os-architecture-planning.json
+  - In ivi374forivi org
+  - Add this conversation as first planning doc
+  - Add link to master plan in README
+  - Note: "This repo is component 1 of 8 in the cognitive OS roadmap"
+  - Conversation Metadata
+  - Key Decisions
+  - Artifacts Generated
+  - Next Steps
+  - Full Conversation
+  - Your Cognitive OS Roadmap
+  - Preservation Protocol Established
+  - Your cognitive operating system now has its architectural blueprint ready. Create the master-plan repository manually, and the foundation will be complete. The archaeological dig begins with the tribunal, and the path from chaos to order is now clearly mapped
+
+### Phase 5: Cross-Repository Linking (Priority: MEDIUM)
+
+- [ ] **Update cognitive-archaelogy-tribunal**
+  - [ ] Add to README: "This repository is component 1 of 8 in the [cognitive OS roadmap](https://github.com/ivi374forivi/cognitive-os-master-plan)"
+  - [ ] Link to master plan in documentation
+  - [ ] Add badge: `Part of Cognitive OS Architecture`
+
+- [ ] **Create placeholder READMEs for future repos**
+  - [ ] For each planned repo, create minimal README linking to master plan
+  - [ ] Prevents namespace collision
+  - [ ] Establishes lineage before implementation
+
+- [ ] **Update organization README (ivi374forivi/.github)**
+  - [ ] Add section: "Cognitive Operating System"
+  - [ ] Link to cognitive-os-master-plan
+  - [ ] Add architecture diagram (optional)
+  - [ ] List all 8 planned repositories with status badges
+
+### Phase 6: Maintenance & Updates (Priority: ONGOING)
+
+- [ ] **Establish update protocol**
+  - [ ] Update master plan README with current status
+  - [ ] Mark completed phases in roadmap
+  - [ ] Update repository-map.md as repos are created
+  - [ ] Add new conversations to planning-conversations/
+  - [ ] Update GitHub discussion with progress reports
+  - [ ] Close tracking issues as repos reach production
+
+- [ ] **Version control for planning documents**
+  - [ ] Tag significant milestones (v1.0-planning, v1.1-phase1-complete)
+  - [ ] Create CHANGELOG.md for architectural decisions
+  - [ ] Document deviations from original plan
+
+## Preservation Status Dashboard
+
+| Preservation Method       | Status    | Priority | Target Date | Completion |
+| ------------------------- | --------- | -------- | ----------- | ---------- |
+| Conversation Export       | ⏳ Pending | URGENT   | 2025-11-21  | 0%         |
+| Master Plan Repo Creation | ⏳ Pending | URGENT   | 2025-11-21  | 0%         |
+| Upload to Master Plan     | ⏳ Pending | URGENT   | 2025-11-22  | 0%         |
+| Documentation Structure   | ⏳ Pending | HIGH     | 2025-11-23  | 0%         |
+| Tracking Issues (7 repos) | ⏳ Pending | HIGH     | 2025-11-24  | 0%         |
+| GitHub Discussion Post    | ⏳ Pending | MEDIUM   | 2025-11-25  | 0%         |
+| Cross-Repo Linking        | ⏳ Pending | MEDIUM   | 2025-11-26  | 0%         |
+| Org README Update         | ⏳ Pending | MEDIUM   | 2025-11-27  | 0%         |
+
+**Legend:** ✅ Complete | ⏳ Pending | 🚧 In Progress | ❌ Blocked
+
+## Next Review: 2025-11-28
+
+Review this checklist weekly and update the Preservation Status Dashboard. Archive completed sections and add new preservation tasks as the system evolves.
+
+---
 
 IMMEDIATE NEXT STEPS:
 Tonight (Next 30 minutes):

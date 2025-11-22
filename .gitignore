@@ -34,7 +34,6 @@ env/
 .vscode/
 .trunk/
 .history/
-.github/
 .specstory/
 
 # IDE
